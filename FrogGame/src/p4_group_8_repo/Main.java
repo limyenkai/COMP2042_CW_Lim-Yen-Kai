@@ -25,13 +25,13 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 	    background = new MyStage();
-	    Scene scene  = new Scene(background,600,800);
-	    
+	    Scene scene  = new Scene(background, 600, 800);
+	   
 		//Obstacle obstacle = new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 25, 25, 3);
 		//Obstacle obstacle1 = new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 100, 100,2 );
 		//Obstacle obstacle2 = new Obstacle("file:src/p4_group_8_repo/truck1Right.png",0,  150, 1);
-
-		BackgroundImage froggerback = new BackgroundImage("file:src/p4_group_8_repo/Screen Shot 2017-05-29 at 10.02.14 PM.png");
+	    
+		BackgroundImage froggerback = new BackgroundImage("file:src/p4_group_8_repo/iKogsKW.png");
 	    
 		background.add(froggerback);
 		
@@ -72,11 +72,11 @@ public class Main extends Application {
 		//End end3 = new End();
 		//End end4 = new End();
 		//End end5 = new End();
-		background.add(new End(13,96));
-		background.add(new End(141,96));
-		background.add(new End(141 + 141-13,96));
-		background.add(new End(141 + 141-13+141-13+1,96));
-		background.add(new End(141 + 141-13+141-13+141-13+3,96));
+		background.add(new End(11,96));
+		background.add(new End(131,96));
+		background.add(new End(250,96));
+		background.add(new End(368,96));
+		background.add(new End(490,96));
 		animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");
 		background.add(animal);
 		background.add(new Obstacle("file:src/p4_group_8_repo/truck1"+"Right.png", 0, 649, 1, 120, 120));
@@ -87,8 +87,9 @@ public class Main extends Application {
 		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 250, 597, -1, 50, 50));
 		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 400, 597, -1, 50, 50));
 		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 550, 597, -1, 50, 50));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 0, 540, 1, 200, 200));
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck2Right.png", 500, 540, 1, 200, 200));
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 0, 540, 1, 120, 120));
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 500, 540, 1, 120, 120));
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 800, 540, 1, 120, 120));
 		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 500, 490, -5, 50, 50));
 		background.add(new Digit(0, 30, 360, 25));
 		//background.add(obstacle);

@@ -14,12 +14,12 @@ public class Animal extends Actor {
 	int points = 0, end = 0, imgSize = 40, carD = 0;
 	private boolean second = false;
 	boolean noMove = false, carDeath = false, waterDeath = false, stop = false, changeScore = false;
-	double movement = 13.3333333*2, movementX = 10.666666*2, w = 800;
+	double movement = 13*2, movementX = 10.666666*2, w = 800;
 	ArrayList<End> inter = new ArrayList<End>();
 	public Animal(String imageLink) {
 		setImage(new Image(imageLink, imgSize, imgSize, true, true));
 		setX(300);
-		setY(679.8+movement);
+		setY(585+movement);
 		frogUp = new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true);
 		frogLeft = new Image("file:src/p4_group_8_repo/froggerLeft.png", imgSize, imgSize, true, true);
 		frogDown = new Image("file:src/p4_group_8_repo/froggerDown.png", imgSize, imgSize, true, true);
@@ -120,7 +120,7 @@ public class Animal extends Actor {
 		int bounds = 0;
 		if (getY()<0 || getY()>734) {
 			setX(300);
-			setY(679.8+movement);
+			setY(578+movement);
 		}
 		if (getX()<0) {
 			move(movement*2, 0);
@@ -141,7 +141,7 @@ public class Animal extends Actor {
 			}
 			if (carD == 4) {
 				setX(300);
-				setY(679.8+movement);
+				setY(585+movement);
 				carDeath = false;
 				carD = 0;
 				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true));
@@ -172,7 +172,7 @@ public class Animal extends Actor {
 			}
 			if (carD == 5) {
 				setX(300);
-				setY(679.8+movement);
+				setY(585+movement);
 				waterDeath = false;
 				carD = 0;
 				setImage(new Image("file:src/p4_group_8_repo/froggerUp.png", imgSize, imgSize, true, true));
@@ -222,12 +222,12 @@ public class Animal extends Actor {
 			getIntersectingObjects(End.class).get(0).setEnd();
 			end++;
 			setX(300);
-			setY(679.8+movement);
+			setY(585+movement);
 		}
-		else if (getY()<413){
+		else if (getY()<326){
 			waterDeath = true;
 			//setX(300);
-			//setY(679.8+movement);
+			//setY(578+movement);
 		}
 	}
 	public boolean getStop() {

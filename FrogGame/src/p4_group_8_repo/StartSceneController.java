@@ -1,18 +1,17 @@
 package p4_group_8_repo;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Textfield;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.input.InputMethodEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class StartSceneController {
 
-	private GameController gameController;
-	
-	public void setGameController(GameController gameController) {
-		this.gameController = gameController;
-	}
-	
     @FXML
     private TextField Textbox;
 
@@ -20,12 +19,13 @@ public class StartSceneController {
     private Button StartBtn;
 
     @FXML
-    private void Start() {
-    	gameController.start();
+    public void Start(MouseEvent event) {
+    	
     }
 
     @FXML
-    private void Text(InputMethodEvent event) {
-   
+    void Text(InputMethodEvent event) {
+
     }
-   }
+
+}

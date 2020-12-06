@@ -10,7 +10,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-public class level1 extends Application {
+public class level2 extends Application {
 	AnimationTimer timer;
 	MyStage background;
 	Animal animal;
@@ -45,12 +45,13 @@ public class level1 extends Application {
 		background.add(new Log("file:src/p4_group_8_repo/longlog.png", 300, 0, 250, 2));
 		background.add(new Log("file:src/p4_group_8_repo/longlog.png", 300, 400, 250, 2));
 		
-		background.add(new Turtle(500, 295, -1, 130, 130));
-		background.add(new Turtle(300, 295, -1, 130, 130));
-		background.add(new WetTurtle(700, 295, -1, 130, 130));
-		background.add(new WetTurtle(600, 191, -1, 130, 130));
-		background.add(new WetTurtle(400, 191, -1, 130, 130));
-		background.add(new WetTurtle(200, 191, -1, 130, 130));
+		background.add(new Turtle(500, 295, -1, 130, 130));  	//first lane turtle
+		background.add(new Turtle(300, 295, -1, 130, 130));  	//first lane turtle
+		background.add(new WetTurtle(700, 295, -1, 130, 130));	//first lane turtle
+		
+		background.add(new WetTurtle(600, 191, -1, 130, 130)); 	//third lane turtle
+		background.add(new WetTurtle(400, 191, -1, 130, 130));	//third lane turtle
+		background.add(new WetTurtle(200, 191, -1, 130, 130));	//third lane turtle
 		
 		background.add(new End(11,75));
 		background.add(new End(137,75));
@@ -59,20 +60,21 @@ public class level1 extends Application {
 		background.add(new End(520,75));
 		animal = new Animal("file:src/p4_group_8_repo/froggerUp.png");
 		background.add(animal);
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 100, 555, 1, 120, 120)); //first lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 340, 555, 1, 120, 120)); //first lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 500, 555, 1, 120, 120)); //first lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Left.png", 100, 555, -2, 120, 120)); //first lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Left.png", 340, 555, -2, 120, 120)); //first lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Left.png", 500, 555, -2, 120, 120)); //first lane
 
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 100, 508, -1, 50, 50)); //second lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 250, 508, -1, 50, 50)); //second lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 400, 508, -1, 50, 50)); //second lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 550, 508, -1, 50, 50)); //second lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/car1Right.png", 100, 508, 1, 50, 50)); //second lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/car1Right.png", 250, 508, 1, 50, 50)); //second lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/car1Right.png", 400, 508, 1, 50, 50)); //second lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/car1Right.png", 550, 508, 1, 50, 50)); //second lane
 		
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 0, 455, 2, 120, 120)); //third lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 300, 455, 2, 120, 120)); //third lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Right.png", 1000, 455, 2, 120, 120)); //third lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Left.png", 0, 455, -2, 120, 120)); //third lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Left.png", 300, 455, -2, 120, 120)); //third lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/truck1Left.png", 1000, 455, -2, 120, 120)); //third lane
 		
-		background.add(new Obstacle("file:src/p4_group_8_repo/car1Left.png", 500, 405, -5, 50, 50)); //forth lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/car1Right.png", 500, 405, 5, 50, 50)); //forth lane
+		
 		background.add(new Digit(0, 30, 550, 20));
 		background.start();
 		primaryStage.setScene(scene);
@@ -123,6 +125,7 @@ public class level1 extends Application {
     		}
     }
 }
+
 
 
 

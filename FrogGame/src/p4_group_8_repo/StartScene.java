@@ -50,8 +50,7 @@ public class StartScene extends JFrame implements ActionListener{
 		button3.setBorder(BorderFactory.createEtchedBorder());
 	
 		frame = new JFrame();
-		label = new JLabel("Select Stage:");
-		username = new JTextField(20);
+		label = new JLabel("Please Select Stage:");
 		
 		GUIsetup();
 	}
@@ -64,7 +63,7 @@ public class StartScene extends JFrame implements ActionListener{
 		Container cp = frame.getContentPane();	//JFrame setup
 		FlowLayout flow = new FlowLayout();		//JFrame layout
 		cp.setLayout(flow);						
-		frame.setSize(600,690);
+		frame.setSize(350,100);
 		frame.setTitle("Frogger");
 		cp.add(label);
 		cp.add(button1);	//add level 1 button to frame

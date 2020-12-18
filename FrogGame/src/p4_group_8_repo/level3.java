@@ -7,7 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
-public class level2 extends Application{
+public class level3 extends Application{
 	AnimationTimer timer;
 	MyStage background;
 	Animal animal;
@@ -23,18 +23,18 @@ public class level2 extends Application{
 	    
 		background.add(froggerback);
 		
-		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 0, 140, 2));
-		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 220, 140, 2));
-		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 440, 140, 2));
-		background.add(new Log("file:src/p4_group_8_repo/img/longlog.png", 300, 0, 250, 3));
-		background.add(new Log("file:src/p4_group_8_repo/img/longlog.png", 300, 400, 250, 3));
+		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 0, 140, 5));
+		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 220, 140, 5));
+		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 440, 140, 5));
+		background.add(new Log("file:src/p4_group_8_repo/img/longlog.png", 300, 0, 250, 4));
+		background.add(new Log("file:src/p4_group_8_repo/img/longlog.png", 300, 400, 250, 4));
 		
-		background.add(new Turtle(500, 295, -2, 130, 130));
-		background.add(new Turtle(300, 295, -2, 130, 130));
-		background.add(new WetTurtle(700, 295, -2, 130, 130));
-		background.add(new WetTurtle(600, 191, -2, 130, 130));
-		background.add(new WetTurtle(400, 191, -2, 130, 130));
-		background.add(new WetTurtle(200, 191, -2, 130, 130));
+		background.add(new Turtle(500, 295, -3, 130, 130));
+		background.add(new Turtle(300, 295, -3, 130, 130));
+		background.add(new WetTurtle(700, 295, -3, 130, 130));
+		background.add(new WetTurtle(600, 191, -3, 130, 130));
+		background.add(new WetTurtle(400, 191, -3, 130, 130));
+		background.add(new WetTurtle(200, 191, -3, 130, 130));
 		
 		background.add(new End(11,75));
 		background.add(new End(137,75));
@@ -45,20 +45,20 @@ public class level2 extends Application{
 		animal = new Animal("file:src/p4_group_8_repo/img/froggerUp.png");
 		background.add(animal);
 		
-		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 100, 555, -2, 120, 120)); //first lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 340, 555, -2, 120, 120)); //first lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 500, 555, -2, 120, 120)); //first lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 100, 555, -4, 120, 120)); //first lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 340, 555, -4, 120, 120)); //first lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 500, 555, -4, 120, 120)); //first lane
 
 		background.add(new Obstacle("file:src/p4_group_8_repo/img/car1Right.png", 100, 508, 2, 50, 50)); //second lane
 		background.add(new Obstacle("file:src/p4_group_8_repo/img/car1Right.png", 250, 508, 2, 50, 50)); //second lane
 		background.add(new Obstacle("file:src/p4_group_8_repo/img/car1Right.png", 400, 508, 2, 50, 50)); //second lane
 		background.add(new Obstacle("file:src/p4_group_8_repo/img/car1Right.png", 550, 508, 2, 50, 50)); //second lane
 		
-		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 0, 455, -3, 120, 120)); //third lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 300, 455, -3, 120, 120)); //third lane
-		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 1000, 455, -3, 120, 120)); //third lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 0, 455, -5, 120, 120)); //third lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 300, 455, -5, 120, 120)); //third lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 1000, 455, -5, 120, 120)); //third lane
 		
-		background.add(new Obstacle("file:src/p4_group_8_repo/img/car1Right.png", 500, 405, 5, 50, 50)); //forth lane
+		background.add(new Obstacle("file:src/p4_group_8_repo/img/car1Right.png", 500, 405, 10, 50, 50)); //forth lane
 		background.add(new Digit(0, 30, 550, 20));
 		
 		background.start();
@@ -66,6 +66,7 @@ public class level2 extends Application{
 		primaryStage.show();
 		start();  
 	};  
+	
 	
 	public void start() {
 		background.playMusic();

@@ -16,6 +16,11 @@ public class Animal extends Actor {
 	boolean noMove = false, carDeath = false, waterDeath = false, stop = false, changeScore = false;
 	double movement = 13*2, movementX = 10.666666*2, w = 800;
 	ArrayList<End> inter = new ArrayList<End>();
+	
+	/**
+	 * handles frog animation and frog car death and water death
+	 * @param imageLink
+	 */
 	public Animal(String imageLink) {
 		setImage(new Image(imageLink, imgSize, imgSize, true, true));
 		setX(300);
@@ -29,6 +34,9 @@ public class Animal extends Actor {
 		frogJumpDown = new Image("file:src/p4_group_8_repo/img/froggerDownJump.png", imgSize, imgSize, true, true);
 		frogJumpRight = new Image("file:src/p4_group_8_repo/img/froggerRightJump.png", imgSize, imgSize, true, true);
 		setOnKeyPressed(new EventHandler<KeyEvent>() {
+			/**
+			 * 
+			 */
 			public void handle(KeyEvent event){
 				if (noMove) {
 					
@@ -115,6 +123,10 @@ public class Animal extends Actor {
 		});
 	}
 	
+	/**
+	 * Displays animation when frog dies either by a car or by water
+	 * @param now
+	 */
 	@Override
 	public void act(long now) {
 		int bounds = 0;
@@ -230,14 +242,27 @@ public class Animal extends Actor {
 			//setY(578+movement);
 		}
 	}
+	
+	/**
+	 * Stops the game
+	 * @return stopped game
+	 */
 	public boolean getStop() {
 		return end==5;
 	}
 	
+	/**
+	 * get the total points that the player got 
+	 * @return the total point achieved by the player
+	 */
 	public int getPoints() {
 		return points;
 	}
 	
+	/**
+	 * changes score when user reaches end goal
+	 * @return changed score when user reaches end goal
+	 */
 	public boolean changeScore() {
 		if (changeScore) {
 			changeScore = false;

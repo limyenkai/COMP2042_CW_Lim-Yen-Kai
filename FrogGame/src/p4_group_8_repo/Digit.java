@@ -7,10 +7,17 @@ public class Digit extends Actor{
 	Image im1;
 	@Override
 	public void act(long now) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	
+	/**
+	 * calls the digit image file
+	 * @param n
+	 * @param dim
+	 * @param x
+	 * @param y
+	 */
 	public Digit(int n, int dim, int x, int y) {
 		im1 = new Image("file:src/p4_group_8_repo/img/"+n+".png", dim, dim, true, true);
 		setImage(im1);

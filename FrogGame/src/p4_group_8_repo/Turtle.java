@@ -3,7 +3,7 @@ package p4_group_8_repo;
 import javafx.scene.image.Image;
 
 public class Turtle extends Actor{
-	Image turtle1, turtle2, turtle3; //one image
+	Image turtle1, turtle2, turtle3; //makes up the animation of turtles
 	private int speed;
 	int i = 1;
 	boolean bool = true;
@@ -29,6 +29,15 @@ public class Turtle extends Actor{
 		if (getX() < -75 && speed<0)
 			setX(600);
 	}
+	
+	/**
+	 * this method calls 3 pictures of turtle to create an animation
+	 * @param xpos	x axis position of the turtle
+	 * @param ypos	y axis position of the turtle
+	 * @param s		speed of the turtle
+	 * @param w		width of the turtle
+	 * @param h		height of the turtle
+	 */
 	public Turtle(int xpos, int ypos, int s, int w, int h) {
 		turtle1 = new Image("file:src/p4_group_8_repo/img/TurtleAnimation1.png", w, h, true, true);
 		turtle2 = new Image("file:src/p4_group_8_repo/img/TurtleAnimation2.png", w, h, true, true);

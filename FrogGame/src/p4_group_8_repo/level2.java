@@ -12,6 +12,10 @@ public class level2 extends Application{
 	MyStage background;
 	Animal animal;
 	
+	/**
+	 * generates level 1 by creating a frame, background, obstacles and frog
+	 * @param primaryStage
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
@@ -19,15 +23,15 @@ public class level2 extends Application{
 	    background = new MyStage();
 	    Scene scene  = new Scene(background, 600, 690);
 
-		BackgroundImage froggerback = new BackgroundImage("file:src/p4_group_8_repo/img/iKogsKW.png");
+		BackgroundImage froggerback = new BackgroundImage("file:src/p4_group_8_repo/img/iKogsKW.png"); //add background
 	    
 		background.add(froggerback);
 		
-		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 0, 140, 2));
-		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 220, 140, 2));
-		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 440, 140, 2));
-		background.add(new Log("file:src/p4_group_8_repo/img/longlog.png", 300, 0, 250, 3));
-		background.add(new Log("file:src/p4_group_8_repo/img/longlog.png", 300, 400, 250, 3));
+		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 0, 140, 2)); //fourth water lane
+		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 220, 140, 2)); //fourth water lane
+		background.add(new Log("file:src/p4_group_8_repo/img/shortlog.png", 150, 440, 140, 2)); //fourth water lane
+		background.add(new Log("file:src/p4_group_8_repo/img/longlog.png", 300, 0, 250, 3)); // second water lane
+		background.add(new Log("file:src/p4_group_8_repo/img/longlog.png", 300, 400, 250, 3)); //second water lane
 		
 		background.add(new Turtle(500, 295, -2, 130, 130));
 		background.add(new Turtle(300, 295, -2, 130, 130));
@@ -42,7 +46,7 @@ public class level2 extends Application{
 		background.add(new End(394,75));
 		background.add(new End(520,75));
 		
-		animal = new Animal("file:src/p4_group_8_repo/img/froggerUp.png");
+		animal = new Animal("file:src/p4_group_8_repo/img/froggerUp.png"); //frog spawning
 		background.add(animal);
 		
 		background.add(new Obstacle("file:src/p4_group_8_repo/img/truck1Left.png", 100, 555, -2, 120, 120)); //first lane
@@ -67,12 +71,18 @@ public class level2 extends Application{
 		start();  
 	};  
 	
+	/**
+	 * to start the game by creating animation for the actor and play the music
+	 */
 	public void start() {
 		background.playMusic();
     	createTimer();
         timer.start();
     }
 
+	/**
+	 * Control the points awarded to the player and display high score at the end
+	 */
 	public void createTimer() {
         timer = new AnimationTimer() {
             @Override
@@ -95,6 +105,10 @@ public class level2 extends Application{
         };
     }
 	
+	/**
+	 * this method call in digits ranging from 0-9 to display points 
+	 * @param n
+	 */
 	public void setNumber(int n) {
     	int shift = 0;
     	while (n > 0) {

@@ -20,6 +20,9 @@ import javafx.stage.Stage;
 public abstract class World extends Pane {
     private AnimationTimer timer;
     
+    /**
+     * generates the world and all the actors
+     */
     public World() {
     	
     	sceneProperty().addListener(new ChangeListener<Scene>() {
@@ -65,6 +68,9 @@ public abstract class World extends Pane {
 		});
     }
 
+    /**
+     * this method creates an animation timer to start the animation
+     */
     public void createTimer() {
         timer = new AnimationTimer() {
             @Override
@@ -80,23 +86,43 @@ public abstract class World extends Pane {
         };
     }
 
+    /**
+     * this method starts the timer
+     */
     public void start() {
     	createTimer();
         timer.start();
     }
 
+    /**
+     * this method stops the timer
+     */
     public void stop() {
         timer.stop();
     }
     
+    /**
+     * this method adds an actor into the world
+     * @param actor	actor of world
+     */
     public void add(Actor actor) {
         getChildren().add(actor);
     }
 
+    /**
+     * this method removes the actor from the world
+     * @param actor actor of world
+     */
     public void remove(Actor actor) {
         getChildren().remove(actor);
     }
 
+    /**
+     * this method calls in actor
+     * @param <A>	
+     * @param cls
+     * @return	an array of actors
+     */
     public <A extends Actor> List<A> getObjects(Class<A> cls) {
         ArrayList<A> someArray = new ArrayList<A>();
         for (Node n: getChildren()) {

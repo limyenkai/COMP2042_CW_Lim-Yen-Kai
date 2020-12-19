@@ -27,3 +27,7 @@
 
 ### Extension
 1. Multiple levels in the game
+
+# Notes
+1. Javadoc generated in [/doc].
+
